@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+App to Parse/filter every Csv file and Excel file (soon)
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby 3.0.0
 
-* System dependencies
+* Rails 6
 
-* Configuration
+* bundle i
 
-* Database creation
+* Pg : rails db:create db:migrate
 
-* Database initialization
+* rails s
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Heroku : https://justparseit.herokuapp.com 
