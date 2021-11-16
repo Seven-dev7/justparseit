@@ -1,0 +1,10 @@
+<h1 class='text-center'>Votre nouveau Csv</h1>
+
+<h3>Voici un échantillon du fichier csv avec uniquement les paramétres choisis</h3>
+
+<%= render partial: "table", locals: { csv_content: @new_csv }%>
+
+<div class="d-flex flex-column">
+  <%= link_to 'Télécharger le fichier', root_path %>
+  <%= link_to "Retour à l'accueil", root_path %>
+</div>

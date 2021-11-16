@@ -1,0 +1,11 @@
+<h1 class="text-center">CSV</h1>
+<p class="text-center mt-2">Voici un echantillon du contenu du csv choisi</p><br>
+
+<div class="row">
+  <div class="col">
+    <%= render partial: "table", locals: { csv_content: @csv_content }%>
+  </div>
+  <div class="col">
+    <%= render partial: "csv_loaders/form_chosen_values", locals: { csv_loader: csv_loader }%>
+  </div>
+</div>

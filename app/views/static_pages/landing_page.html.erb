@@ -1,0 +1,11 @@
+<h1 class="text-center">Bienvenue sur Just Parse It</h1>
+
+<div class="row">
+  <div class="col">
+    <%= render partial: "csv_loaders/form_csv_file", locals: { csv_loader: @csv_loader }%>
+  </div>
+  <div class="col">
+    <p>Excel</p>
+    <%# render partial: "excel_loaders/form", locals: { excel_loader: @excel_loader }%>
+  </div>
+</div>

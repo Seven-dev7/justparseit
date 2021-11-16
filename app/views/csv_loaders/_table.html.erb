@@ -1,0 +1,22 @@
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col"><%= csv_content.first.keys[0] %></th>
+      <th scope="col"><%= csv_content.first.keys[1] %></th>
+      <th scope="col"><%= csv_content.first.keys[2] %></th>
+      <th scope="col"><%= csv_content.first.keys[3] %></th>
+      <th scope="col"><%= csv_content.first.keys[4] %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% csv_content.each do |hash| %>
+    <tr>
+      <th scope="row"><%= hash.values[0] %></th>
+      <th scope="row"><%= hash.values[1].split(' ').last %></th>
+      <th scope="row"><%= hash.values[2] %></th>
+      <th scope="row"><%= hash.values[3] %></th>
+      <th scope="row"><%= hash.values[4] %></th>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
