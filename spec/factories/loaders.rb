@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :csv_loader do
+  factory :loader do
     
   end
 end

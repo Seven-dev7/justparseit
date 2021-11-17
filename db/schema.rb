@@ -43,14 +43,14 @@ ActiveRecord::Schema.define(version: 2021_11_15_083533) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "csv_elements", force: :cascade do |t|
-    t.bigint "csv_loader_id", null: false
+  create_table "elements", force: :cascade do |t|
+    t.bigint "loader_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["csv_loader_id"], name: "index_csv_elements_on_csv_loader_id"
+    t.index ["loader_id"], name: "index_elements_on_loader_id"
   end
 
-  create_table "csv_loaders", force: :cascade do |t|
+  create_table "loaders", force: :cascade do |t|
     t.text "chosen_values"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -58,5 +58,5 @@ ActiveRecord::Schema.define(version: 2021_11_15_083533) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "csv_elements", "csv_loaders"
+  add_foreign_key "elements", "loaders"
 end

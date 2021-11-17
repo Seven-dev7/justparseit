@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   root to: 'static_pages#landing_page'
-  resources :csv_loaders, only: %i(show create update) do
-    resources :csv_elements
+  resources :loaders, only: %i(show create update) do
+    resources :elements
     member do
-      get 'new_csv_display'
+      get 'new_file_display'
     end
   end
 end

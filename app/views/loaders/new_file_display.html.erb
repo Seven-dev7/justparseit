@@ -2,7 +2,7 @@
 
 <h3>Voici un échantillon du fichier csv avec uniquement les paramétres choisis</h3>
 
-<%= render partial: "table", locals: { csv_content: @new_csv }%>
+<%= render partial: "table", locals: { content: @new_file }%>
 
 <div class="d-flex flex-column">
   <%= link_to 'Télécharger le fichier', root_path %>

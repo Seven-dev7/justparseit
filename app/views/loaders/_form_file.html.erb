@@ -1,0 +1,13 @@
+<%= form_with model: [@loader, @loader.elements.build] do |form| %>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">CSV</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Veuillez choisir un fichier Csv ou Excel</h6>
+      <div class="d-flex">
+        <p class="card-text"><%= form.file_field :file %> </p>
+        <%= form.hidden_field :loader_id, value: loader.id %> 
+      </div>
+      <span class="card-link"><%= form.submit('Soumettre le ficher') %></span>
+    </div>
+  </div>
+<% end %>

@@ -3,9 +3,9 @@
 
 <div class="row">
   <div class="col">
-    <%= render partial: "table", locals: { csv_content: @csv_content }%>
+    <%= render partial: "table", locals: { content: @content }%>
   </div>
   <div class="col">
-    <%= render partial: "csv_loaders/form_chosen_values", locals: { csv_loader: csv_loader }%>
+    <%= render partial: "loaders/form_chosen_values", locals: { loader: loader }%>
   </div>
 </div>

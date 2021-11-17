@@ -42,7 +42,7 @@ class CsvParser
   end
 
   def doc_csv
-    file_path = ActiveStorage::Blob.service.send(:path_for, @csv.csv_file.key)
+    file_path = ActiveStorage::Blob.service.send(:path_for, @csv.file.key)
     CSV.foreach(file_path, encoding:'iso-8859-1:utf-8', headers: true)
     #CSV.parse(@csv, headers: true, encoding: "ISO8859-1:utf-8")
   end
